@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.menu{
+    background-color: black;
+    list-style: none;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+}
+.menu li{
+    float: left;
+}
+.menu li a{
+    color: white;
+    display: inline-block;
+    text-align: center;
+    padding: 20px 15px;
+    font-size: 20px;
+}
+.menu li a:hover{
+    background-color: white;
+    transform: scale(1.01);
+    transition: 0.5s;
+    color: black;
+}
+.menu img{
+    padding: 8px;
+    height: 70px;
+    width: auto;
+}
+.fixed{
+    background-color: rgb(255, 0, 0);
+    width: 100%;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.fixed h1{
+    color: white;
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.header{
+    background-image: none, url(IMG/20200714ford-bronco13.jpg);
+    width: 100%;
+    height: 891px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.header-text{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    text-shadow: 0 0 15px black;
+}
+.card-footer{
+    text-align: center;
+    margin-top: 20px;
+}
+.btn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.footer{
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    font-family: sans-serif;
+    color: white;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empleados</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Estilos.css">
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body class="bg-light">
+    <nav>
+        <ul class="menu"> 
+            <li><img src="IMG/Untitled design.png" alt="Logo"></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="">Ingreso Vehiculos</a></li>
+        </ul>
+    </nav>
+    <header class="fixed">
+        <h1>INGRESE O BUSQUE VEHICULO</h1>
+    </header>
+    <main class="container-fluid">
+        <div class="row mt-3">
+            <div class="col-4">
+                <form action="" class="card">
+                    <div class="card-header">
+                        <h5>Ingresa los Datos</h5>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <label>Patente</label>
+                            <input type="text" class="form-control" id="patente" name="patente" onblur="verificar(this.id)" maxlength="7">
+                            <div id="e-patente"></div>
+                        </div>
+                        <div>
+                            <label>Imagen Del Vehiculo</label>
+                            <input type="file" class="form-control" id="imagen" name="file" onblur="verificar(this.id)">
+                            <div id="e-imagen"></div>
+                        </div>
+                        <div>
+                            <label>Marca Del Vehiculo</label>
+                            <select class="form-control" id="marca" name="brand" onblur="verificar(this.id)">
+                            <option value="" disabled selected>Seleccione Marca de Vehiculo</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="chevrolet">Chevrolet</option>
+                            <option value="hyundai">Hyundai</option>
+                            <option value="kia">Kia</option>
+                            <option value="suzuki">Suzuki</option>
+                            <option value="peugeot">Peugeot</option>
+                            <option value="nissan">Nissan</option>
+                            <option value="ford">Ford</option>
+                            <option value="mitsubishi">Mitsubishi</option>
+                            <option value="mazda">Mazda</option>
+                            </select>
+                            <div id="e-marca"></div>
+                        </div>
+                        <div>
+                            <label>Modelo Del Vehiculo</label>
+                            <input type="text" class="form-control" id="modelo" name="model" onblur="verificar(this.id)">
+                            <div id="e-modelo"></div>
+                        </div>
+                        <div>
+                            <label>Precio Del Vehiculo</label>
+                            <input type="text" class="form-control" id="precio" name="price" onblur="verificar(this.id)"
+                            onkeypress="return soloNumeros(event)">
+                            <div id="e-precio"></div>
+                        </div>
+                        <div>
+                            <label>Fecha Del Vehiculo</label>
+                            <input type="date" class="form-control" id="fecha" name="date" onblur="verificar(this.id)">
+                            <div id="e-fecha"></div>
+                        </div>
+                        <div>
+                            <label>Kilometros del Vehiculo</label>
+                            <input type="text" class="form-control" id="kilometros" name="kilometres" onblur="verificar(this.id)"
+                            onkeypress="return soloNumeros(event)">
+                            <div id="e-kilometros"></div>
+                        </div>
+                        <div>
+                            <label>Estado del Vehiculo</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="state" id="Nuevo" value="e-Nuevo" onclick="validaRadio(this.name)">
+                                <label class="form-check-label">Nuevo</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="state" id="Seminuevo" value="e-Seminuevo" onclick="validaRadio(this.name)">
+                                <label class="form-check-label">Seminuevo</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="state" id="Usado" value="e-Usado" onclick="validaRadio(this.name)">
+                                <label class="form-check-label">Usado</label>
+                            </div>
+                            <div id="e-state"></div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center">
+                        <input type="reset" value="Limpiar" class="btn btn-info" onclick="limpiar()">
+                        <input type="button" id="btnGuardar" value="Guardar" class="btn btn-success">
+                    </div> 
+                </form>
+            </div>
+            <div class="col-8">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Patente</th>
+                                <th>Imagen</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+                                <th>Precio</th>
+                                <th>Fecha Vehiculo</th>
+                                <th>Kilometros</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="contenido">
+                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="assets/js/sweetalert2.min.js"></script>
+    <script src="utilidades.js"></script>
+    <script src="funciones.js" type="module"></script>
+</body>
+</html>
